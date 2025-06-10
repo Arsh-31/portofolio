@@ -1,0 +1,79 @@
+  // ReactJs -
+  // NextJs -
+  // Django
+  // JavaScript -
+  // TypeScript -
+  // Tailwind -
+  // Zustand
+  // Tanstack Query
+  // shadcn
+  // Motion
+  // GSAP
+  // NodeJS -
+  // ExpressJS
+  // PostgreSQL
+  // MongoDB
+  // Redis
+  // Prisma
+  // Postman
+  // Git -
+  // GitHub -
+  // Python -
+  // Java -
+  // C -
+  // C++ -
+  // SQL -
+  // Docker
+  // Linux
+  // Vercel -
+  // Figma
+import {
+  // Frontend
+  SiReact, // React.js
+  SiNextdotjs, // Next.js
+  SiVuedotjs, // Vue.js
+  SiAngular, // Angular
+  SiSvelte, // Svelte
+  SiTailwindcss, // Tailwind CSS
+  SiBootstrap, // Bootstrap
+  // SiMaterialui,     // Material-UI
+  SiChakraui, // Chakra UI
+  SiHtml5, // HTML5
+  SiCss3, // CSS3
+  SiJavascript, // JavaScript
+  SiTypescript, // TypeScript
+
+  // Backend
+  SiNodedotjs, // Node.js
+  SiExpress, // Express.js
+  SiNestjs, // NestJS
+  SiDjango, // Django
+  SiFlask, // Flask
+  SiSpring, // Spring Boot
+  SiFastapi, // FastAPI
+
+  // Databases
+  SiMongodb, // MongoDB
+  SiPostgresql, // PostgreSQL
+  SiMysql, // MySQL
+  SiFirebase, // Firebase
+  SiSupabase, // Supabase
+
+  // DevOps & Cloud
+  SiDocker, // Docker
+  SiKubernetes, // Kubernetes
+  // SiAws,            // AWS
+  // SiAzure,          // Azure
+  SiGooglecloud, // Google Cloud
+  SiVercel, // Vercel
+  SiNetlify, // Netlify
+
+  // Tools
+  SiGit, // Git
+  SiGithub, // GitHub
+  SiGitlab, // GitLab
+  // SiVisualstudiocode, // VS Code
+  SiPostman, // Postman
+  SiFigma, // Figma
+  SiAdobephotoshop, // Photoshop
+} from "react-icons/si";
