@@ -12,6 +12,7 @@ const projects = [
     techStack: ["Next.js 15", "TypeScript", "Tailwind CSS", "Firebase"],
     liveLink: "https://scribe-gold.vercel.app",
     repoLink: "https://github.com/Arsh-31/scribe",
+    status: "Running",
   },
   {
     title: "Vesperal",
@@ -27,6 +28,17 @@ const projects = [
     ],
     liveLink: "https://vesperal-i7eilwf42-arsh31s-projects.vercel.app",
     repoLink: "https://github.com/Arsh-31/Vesperal",
+    status: "Running",
+  },
+  {
+    title: "TypeWriter",
+    description:
+      "Typewriter is a sleek typing speed test app with real-time WPM, accuracy tracking, and confetti celebration.",
+    imageUrl: "/images/working.jpg",
+    techStack: ["Next.js 15", "TypeScript", "Tailwind CSS", "Firebase"],
+    liveLink: "",
+    repoLink: "",
+    status: "Building",
   },
   {
     title: "Pathfinder-Visualizer",
@@ -36,11 +48,35 @@ const projects = [
     techStack: ["Next.js 15", "TypeScript", "Tailwind CSS"],
     liveLink: "https://pathfinding-visualizer-swart.vercel.app",
     repoLink: "https://github.com/Arsh-31/Pathfinding-visualizer",
+    status: "Running",
   },
-  // Add more projects
 ];
 
 export default function ProjectCard() {
+  function StatusTag({ status }: { status: string }) {
+    const base = "text-xs font-medium px-2 py-0.5 rounded-sm";
+
+    if (status === "Running") {
+      return (
+        <span
+          className={`${base} bg-green-700/20 text-green-400 border border-green-600`}
+        >
+          ● Running
+        </span>
+      );
+    } else if (status === "Building") {
+      return (
+        <span
+          className={`${base} bg-red-700/20 text-red-400 border border-red-600`}
+        >
+          ● Building
+        </span>
+      );
+    }
+
+    return null;
+  }
+
   return (
     <div className="mx-auto mt-12 max-w-3xl w-[90%]">
       <h1 className="text-2xl font-bold mb-8">Projects</h1>
@@ -51,7 +87,7 @@ export default function ProjectCard() {
             key={index}
             className="flex flex-col md:flex-row bg-[#18181b] border border-gray-600 rounded-md overflow-hidden shadow-md hover:shadow-lg transition w-full relative group"
           >
-            {/* Clickable Image (1/4 width) */}
+            {/* Clickable Image */}
             <Image
               width={300}
               height={200}
@@ -61,7 +97,7 @@ export default function ProjectCard() {
               onClick={() => window.open(project.liveLink, "_blank")}
             />
 
-            {/* Right Content (3/4 width) */}
+            {/* Right Content */}
             <div className="flex flex-col justify-between p-5 w-full text-[#e4e4e7] relative">
               {/* Top Right Links */}
               <div className="absolute top-4 right-4 flex space-x-4 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -89,7 +125,10 @@ export default function ProjectCard() {
 
               {/* Title & Description */}
               <div>
-                <h2 className="text-xl font-bold mb-2">{project.title}</h2>
+                <div className="flex items-center gap-2 mb-2">
+                  <h2 className="text-xl font-bold">{project.title}</h2>
+                  <StatusTag status={project.status} />
+                </div>
                 <p className="text-sm mb-4">{project.description}</p>
               </div>
 
