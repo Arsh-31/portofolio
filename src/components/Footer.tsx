@@ -35,7 +35,7 @@ const Footer = () => {
         drop me a message or reach out through any of the platforms below!
       </p>
       <a
-        href="mailto:kaurarshpreet@gmail.com"
+        href="mailto:kaurarshpreet746@gmail.com"
         className="text-gray-400 hover:text-[#c41e3a] transition-colors duration-300 inline-block"
         aria-label="Send Email"
       >

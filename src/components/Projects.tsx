@@ -93,7 +93,7 @@ export default function ProjectCard() {
               height={200}
               src={project.imageUrl}
               alt={project.title}
-              className="rounded-sm border-0 w-full md:w-1/4 h-48 md:h-auto object-cover cursor-pointer m-3"
+              className="rounded-sm border-0 w-full md:w-1/4 h-48 md:h-auto object-cover cursor-pointer"
               onClick={() => window.open(project.liveLink, "_blank")}
             />
 

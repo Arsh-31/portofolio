@@ -19,7 +19,7 @@ export default function Card() {
           </a>
 
           <a
-            href="mailto:kaurarshpreet@gmail.com"
+            href="mailto:kaurarshpreet746@gmail.com"
             className="text-[#e4e4e7] border border-gray-600 rounded-sm px-2.5 py-2 hover:bg-[#27272a] transition-colors duration-300"
             aria-label="Send Email"
           >
@@ -59,6 +59,13 @@ export default function Card() {
               aria-label="Visit GitHub Profile"
             >
               <FaGithub size={32} />
+            </a>
+            <a
+              href="mailto:kaurarshpreet746@gmail.com"
+              className="text-gray-400 hover:text-[#c41e3a] transition-colors duration-300 inline-block"
+              aria-label="Send Email"
+            >
+              <Mail size={32} />
             </a>
           </div>
         </div>
