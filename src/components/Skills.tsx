@@ -18,6 +18,8 @@ import {
   SiTypescript,
   SiVercel,
   SiShadcnui,
+  SiExpress,
+  SiMongodb,
 } from "react-icons/si";
 
 export default function About() {
@@ -27,9 +29,11 @@ export default function About() {
     { name: "JavaScript", icon: <SiJavascript color="#f2efea" /> },
     { name: "TypeScript", icon: <SiTypescript color="#f2efea" /> },
     { name: "Tailwind", icon: <SiTailwindcss color="#f2efea" /> },
-    // { name: "Zustand", icon: <SiTailwindcss color="#f2efea" /> },
+    // { name: "Zustand", icon: <SiZustand color="#f2efea" /> },
     { name: "shadcn", icon: <SiShadcnui color="#f2efea" /> },
     { name: "NodeJS", icon: <SiNodedotjs color="#f2efea" /> },
+    { name: "Express.js", icon: <SiExpress color="#f2efea" /> },
+    { name: "MongoDB", icon: <SiMongodb color="#f2efea" /> },
     { name: "Git", icon: <FaGit color="#f2efea" /> },
     { name: "GitHub", icon: <FaGithub color="#f2efea" /> },
     { name: "Python", icon: <FaPython color="#f2efea" /> },
