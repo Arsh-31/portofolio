@@ -7,6 +7,16 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const projects = [
   {
+    title: "Myth & Moss",
+    description:
+      "A whimsical, parchment-styled digital newspaper chronicling enchanted flora, forgotten constellations, lunar myths, and eerie folklore.",
+    imageUrl: "/images/mythmoss.png",
+    techStack: ["Next.js 15", "TypeScript", "Tailwind CSS"],
+    liveLink: "https://myth-moss.vercel.app",
+    repoLink: "https://github.com/Arsh-31/myth-moss",
+    status: "Running",
+  },
+  {
     title: "Scribe",
     description:
       "Scribe is a clean and intuitive note-taking app that lets you write, edit, and save rich-text notes with ease.",
@@ -36,7 +46,7 @@ const projects = [
     title: "TypeWriter",
     description:
       "Typewriter is a sleek typing speed test app with real-time WPM, accuracy tracking, and confetti celebration.",
-    imageUrl: "/images/working.jpg",
+    imageUrl: "/images/typewriter.png",
     techStack: ["Next.js 15", "TypeScript", "Tailwind CSS", "Firebase"],
     liveLink: "",
     repoLink: "",
@@ -80,8 +90,9 @@ export default function ProjectCard() {
 
   return (
     <div className="mx-auto mt-12 max-w-3xl w-[90%]">
-      <h1 className="text-2xl font-bold mb-8">Projects</h1>
-
+      <h1 className="text-2xl font-bold mb-8 underline decoration-wavy decoration-[#343330] underline-offset-4">
+        Projects
+      </h1>
       <div className="grid gap-8">
         {visibleProjects.map((project, index) => (
           <div

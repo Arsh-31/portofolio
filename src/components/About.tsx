@@ -1,7 +1,11 @@
 export default function About() {
   return (
     <div className="mx-auto mt-12 max-w-3xl w-[90%] border-2 p-8 rounded-xl border-b-7 border-r-7">
-      <h1 className="text-2xl font-bold">About Me</h1>
+      <h1 className="text-2xl font-bold">
+        <span className="underline decoration-wavy decoration-[#343330] underline-offset-4">
+          About Me
+        </span>
+      </h1>
       <p className="text-[#343330] pt-3">
         Helloo, I&apos;m Arshpreet Kaur, a Computer Science student. I like to
         build things. I work primarily with React.js, Next.js, using TypeScript
