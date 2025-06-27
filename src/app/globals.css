@@ -37,9 +37,9 @@
 
 :root {
   /* --background: #0d1117; */
-  --background: #111111;
+  --background: #eee4cd;
   /* --foreground: #832232; */
-  --foreground: #f2efea;
+  --foreground: #343330;
 }
 
 @theme inline {
@@ -51,8 +51,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #111111;
-    --foreground: #f2efea;
+    --background: #eee4cd;
+    --foreground: #343330;
     /* --foreground: #c41e3a; */
   }
 }
@@ -69,6 +69,6 @@ body {
 
 /* Custom selection color */
 ::selection {
-  background-color: #b64f60; /* Change to any color you prefer */
-  color: white; /* Optional: change text color */
+  background-color: #b6dad6; /* Change to any color you prefer */
+  color: 343330; /* Optional: change text color */
 }

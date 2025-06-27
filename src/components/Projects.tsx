@@ -2,6 +2,8 @@
 
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import Image from "next/image";
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const projects = [
   {
@@ -53,22 +55,21 @@ const projects = [
 ];
 
 export default function ProjectCard() {
+  const [showAll, setShowAll] = useState(false);
+  const visibleProjects = showAll ? projects : projects.slice(0, 2);
+
   function StatusTag({ status }: { status: string }) {
     const base = "text-xs font-medium px-2 py-0.5 rounded-sm";
 
     if (status === "Running") {
       return (
-        <span
-          className={`${base} bg-green-700/20 text-green-400 border border-green-600`}
-        >
+        <span className={`${base} text-green-600 border border-[#70bd63]`}>
           ● Running
         </span>
       );
     } else if (status === "Building") {
       return (
-        <span
-          className={`${base} bg-red-700/20 text-red-400 border border-red-600`}
-        >
+        <span className={`${base} text-red-400 border border-[#da6e69]`}>
           ● Building
         </span>
       );
@@ -82,62 +83,64 @@ export default function ProjectCard() {
       <h1 className="text-2xl font-bold mb-8">Projects</h1>
 
       <div className="grid gap-8">
-        {projects.map((project, index) => (
+        {visibleProjects.map((project, index) => (
           <div
             key={index}
-            className="flex flex-col md:flex-row bg-[#18181b] border border-gray-600 rounded-md overflow-hidden shadow-md hover:shadow-lg transition w-full relative group"
+            className="flex flex-col md:flex-row bg-transparent border-2 border-[#343330] rounded-xl overflow-hidden shadow-md hover:shadow-lg transition w-full relative group border-b-7 border-r-7"
           >
-            {/* Clickable Image */}
             <Image
               width={300}
               height={200}
               src={project.imageUrl}
               alt={project.title}
-              className="rounded-sm border-0 w-full md:w-1/4 h-48 md:h-auto object-cover cursor-pointer"
-              onClick={() => window.open(project.liveLink, "_blank")}
+              className="border-2 border-[#343330] w-auto md:w-1/4 h-48 md:h-auto object-cover cursor-pointer m-2 select-none rounded-md"
+              onClick={() =>
+                project.liveLink && window.open(project.liveLink, "_blank")
+              }
             />
-
-            {/* Right Content */}
-            <div className="flex flex-col justify-between p-5 w-full text-[#e4e4e7] relative">
-              {/* Top Right Links */}
+            <div className="flex flex-col justify-between p-5 w-full text-[#343330] relative">
               <div className="absolute top-4 right-4 flex space-x-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <a
-                  href={project.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-sm hover:underline"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <FaExternalLinkAlt className="text-sm" />
-                  Live
-                </a>
-                <a
-                  href={project.repoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-sm hover:underline"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <FaGithub className="text-base" />
-                  Code
-                </a>
+                {project.liveLink && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-sm hover:underline"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <FaExternalLinkAlt className="text-sm" />
+                    Live
+                  </a>
+                )}
+                {project.repoLink && (
+                  <a
+                    href={project.repoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-sm hover:underline"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <FaGithub className="text-base" />
+                    Code
+                  </a>
+                )}
               </div>
 
-              {/* Title & Description */}
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <h2 className="text-xl font-bold">{project.title}</h2>
                   <StatusTag status={project.status} />
                 </div>
-                <p className="text-sm mb-4">{project.description}</p>
+                <p className="text-sm font-medium mb-4">
+                  {project.description}
+                </p>
               </div>
 
-              {/* Tech Stack */}
               <div className="flex flex-wrap gap-2 pt-4">
                 {project.techStack.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="bg-[#27272a] text-xs px-2 py-1 rounded-[3px] hover:bg-[#3f3f46] transition"
+                    className="bg-transparent text-xs px-2 py-1 rounded-[3px] hover:bg-[#b6dad6] border-1 transition"
                   >
                     {tech}
                   </span>
@@ -147,6 +150,25 @@ export default function ProjectCard() {
           </div>
         ))}
       </div>
+
+      {projects.length > 2 && (
+        <div className="text-center mt-6">
+          <button
+            onClick={() => setShowAll((prev) => !prev)}
+            className="text-sm text-[#343330] hover:underline transition flex  font-bold border-1 w-full p-2 rounded-lg items-center justify-center gap-1 mx-auto"
+          >
+            {showAll ? (
+              <>
+                Show Less <ChevronUp className="w-4 h-4" />
+              </>
+            ) : (
+              <>
+                Show More <ChevronDown className="w-4 h-4" />
+              </>
+            )}
+          </button>
+        </div>
+      )}
     </div>
   );
 }
