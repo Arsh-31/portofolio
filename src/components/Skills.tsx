@@ -47,7 +47,7 @@ export default function About() {
   ];
   return (
     <div className="mx-auto mt-12 max-w-3xl w-[90%]">
-      <h1 className="text-2xl font-bold mb-4 underline decoration-wavy decoration-[#343330] underline-offset-4">
+      <h1 className="text-2xl font-bold mb-4 underline decoration-wavy decoration-[#343330] underline-offset-6">
         Skills
       </h1>
       <div className="flex flex-wrap gap-1">

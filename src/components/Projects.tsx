@@ -90,14 +90,14 @@ export default function ProjectCard() {
 
   return (
     <div className="mx-auto mt-12 max-w-3xl w-[90%]">
-      <h1 className="text-2xl font-bold mb-8 underline decoration-wavy decoration-[#343330] underline-offset-4">
+      <h1 className="text-2xl font-bold mb-8 underline decoration-wavy decoration-[#343330] underline-offset-6">
         Projects
       </h1>
       <div className="grid gap-8">
         {visibleProjects.map((project, index) => (
           <div
             key={index}
-            className="flex flex-col md:flex-row bg-transparent border-2 border-[#343330] rounded-xl overflow-hidden shadow-md hover:shadow-lg transition w-full relative group border-b-7 border-r-7"
+            className="flex flex-col md:flex-row bg-[#eee4cd] border-2 border-[#343330] rounded-xl overflow-hidden shadow-md hover:shadow-lg transition w-full relative group border-b-7 border-r-7"
           >
             <Image
               width={300}
@@ -166,7 +166,7 @@ export default function ProjectCard() {
         <div className="text-center mt-6">
           <button
             onClick={() => setShowAll((prev) => !prev)}
-            className="text-sm text-[#343330] hover:underline transition flex  font-bold border-1 w-full p-2 rounded-lg items-center justify-center gap-1 mx-auto"
+            className="text-sm text-[#343330] hover:underline transition flex  font-bold border-1 w-full p-2 rounded-lg items-center bg-[#eee4cd] justify-center gap-1 mx-auto"
           >
             {showAll ? (
               <>

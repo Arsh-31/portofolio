@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Card() {
   return (
-    <div className="relative border-2 rounded-xl mx-auto mt-12 max-w-3xl w-[90%] shadow-lg hover:shadow-xl transition-shadow duration-300 border-b-7 border-r-7">
+    <div className="bg-[#eee4cd] relative border-2 rounded-xl mx-auto mt-12 max-w-3xl w-[90%] shadow-lg hover:shadow-xl transition-shadow duration-300 border-b-7 border-r-7">
       <div className="flex border-b-2 relative space-x-2 pl-3">
         <div className="border-3 bg-[#f2d3d1] rounded-full w-5 h-5 my-2"></div>
         <div className="border-3 bg-[#b6dad6] rounded-full w-5 h-5 my-2"></div>

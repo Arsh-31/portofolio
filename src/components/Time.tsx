@@ -12,7 +12,7 @@ export default function Time() {
   }, []);
 
   return (
-    <div className="ml-8 mt-5 font-bold ">
+    <div className="ml-8 mt-5 font-bold">
       {time} &nbsp;&nbsp; Chandigarh, India
     </div>
   );

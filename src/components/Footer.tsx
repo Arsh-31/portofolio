@@ -7,28 +7,28 @@ import {
 import { FaGithub } from "react-icons/fa";
 import { Mail } from "lucide-react";
 
-const footerLinks = [
-  {
-    name: "Github",
-    icon: <FaGithub />,
-    href: "https://github.com/Arsh-31",
-  },
-  {
-    name: "Twitter",
-    icon: <SiX />,
-    href: "https://x.com/it_is_ii",
-  },
-  {
-    name: "Leetcode",
-    icon: <SiLeetcode />,
-    href: "https://leetcode.com/u/Arsh31/",
-  },
-];
+// const footerLinks = [
+//   {
+//     name: "Github",
+//     icon: <FaGithub />,
+//     href: "https://github.com/Arsh-31",
+//   },
+//   {
+//     name: "Twitter",
+//     icon: <SiX />,
+//     href: "https://x.com/it_is_ii",
+//   },
+//   {
+//     name: "Leetcode",
+//     icon: <SiLeetcode />,
+//     href: "https://leetcode.com/u/Arsh31/",
+//   },
+// ];
 
 const Footer = () => {
   return (
     <footer className="mx-auto mt-12 max-w-3xl w-[90%]">
-      <div className="border-2 rounded-xl border-b-7 border-r-7 p-8">
+      <div className="bg-[#eee4cd] border-2 rounded-xl border-b-7 border-r-7 p-8">
         <h1 className="text-2xl font-bold mb-4">Reach out to me</h1>
         <p className="mb-6">
           I&apos;m always open to connecting with fellow developers, discussing
@@ -48,7 +48,8 @@ const Footer = () => {
       </div>
 
       <hr className="h-px mt-8 border-0 dark:bg-gray-700 text-[#343330]" />
-      <div className="flex justify-center items-center my-6 text-[#343330]">
+      <div className="flex justify-center font-bold my-8">Peace out ✌︎</div>
+      {/* <div className="flex justify-center items-center my-6 text-[#343330]">
         <div className="flex flex-wrap gap-4">
           {footerLinks.map((link, index) => (
             <a
@@ -64,7 +65,7 @@ const Footer = () => {
             </a>
           ))}
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 };
