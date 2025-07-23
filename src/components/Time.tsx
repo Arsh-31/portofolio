@@ -11,5 +11,10 @@ export default function Time() {
     return () => clearInterval(interval);
   }, []);
 
-  return <div className="ml-8 mt-5">{time} &nbsp;&nbsp; Chandigarh, India</div>;
+  return (
+    // <div className="ml-8 mt-5 absolute">
+    <div className="ml-6 mt-[-20px] fixed text-[#acacac]">
+      {time} Chandigarh, India
+    </div>
+  );
 }

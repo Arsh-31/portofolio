@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Card() {
   return (
-    <div className="relative border border-gray-700 rounded-md p-8 mx-auto mt-12 max-w-3xl w-[90%] shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <div className="relative border border-gray-700 rounded-md p-8 mx-auto mt-10 max-w-3xl w-[90%] shadow-lg hover:shadow-xl transition-shadow duration-300">
       {/* GitHub Icon for large screens */}
       <div>
         <div className="hidden md:flex absolute top-4 right-5 gap-4">
