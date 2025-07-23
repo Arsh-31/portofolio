@@ -13,14 +13,14 @@ export default function Card() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit GitHub Profile"
-            className="text-[#e4e4e7] border border-gray-600 rounded-sm px-2.5 py-2 hover:bg-[#27272a] transition-colors duration-300"
+            className="text-[#e4e4e7] rounded-sm px-2.5 py-2 hover:bg-[#27272a] transition-colors duration-300"
           >
             <FaGithub size={24} />
           </a>
 
           <a
             href="mailto:kaurarshpreet746@gmail.com"
-            className="text-[#e4e4e7] border border-gray-600 rounded-sm px-2.5 py-2 hover:bg-[#27272a] transition-colors duration-300"
+            className="text-[#e4e4e7] rounded-sm px-2.5 py-2 hover:bg-[#27272a] transition-colors duration-300"
             aria-label="Send Email"
           >
             <Mail size={23} />

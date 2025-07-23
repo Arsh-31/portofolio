@@ -2,6 +2,8 @@
 
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import Image from "next/image";
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const projects = [
   {
@@ -31,28 +33,41 @@ const projects = [
     status: "Running",
   },
   {
-    title: "TypeWriter",
-    description:
-      "Typewriter is a sleek typing speed test app with real-time WPM, accuracy tracking, and confetti celebration.",
-    imageUrl: "/images/working.jpg",
-    techStack: ["Next.js 15", "TypeScript", "Tailwind CSS", "Firebase"],
-    liveLink: "",
-    repoLink: "",
-    status: "Building",
-  },
-  {
     title: "Pathfinder-Visualizer",
     description:
       "A tool that visually demonstrates various pathfinding algorithms (such as A*, Dijkstra) to find the shortest path in a grid or maze.",
-    imageUrl: "/images/live3.png",
+    imageUrl: "/images/pathfinder.png",
     techStack: ["Next.js 15", "TypeScript", "Tailwind CSS"],
     liveLink: "https://pathfinding-visualizer-swart.vercel.app",
     repoLink: "https://github.com/Arsh-31/Pathfinding-visualizer",
     status: "Running",
   },
+  {
+    title: "Next-Auth",
+    description:
+      "A minimal and secure authentication system built with Next.js and NextAuth.js, supporting multiple providers and seamless session management.",
+    imageUrl: "/images/next.png",
+    techStack: ["Next.js"],
+    liveLink: "",
+    repoLink: "https://github.com/Arsh-31/next-auth",
+    status: "Running",
+  },
+  {
+    title: "TypeWriter",
+    description:
+      "Typewriter is a sleek typing speed test app with real-time WPM, accuracy tracking, and confetti celebration.",
+    imageUrl: "/images/type.png",
+    techStack: ["Next.js 15", "TypeScript", "Tailwind CSS", "Firebase"],
+    liveLink: "",
+    repoLink: "https://github.com/Arsh-31/TypeWriter",
+    status: "Building",
+  },
 ];
 
 export default function ProjectCard() {
+  const [showAll, setShowAll] = useState(false);
+  const visibleProjects = showAll ? projects : projects.slice(0, 2);
+
   function StatusTag({ status }: { status: string }) {
     const base = "text-xs font-medium px-2 py-0.5 rounded-sm";
 
@@ -82,7 +97,7 @@ export default function ProjectCard() {
       <h1 className="text-2xl font-bold mb-8">Projects</h1>
 
       <div className="grid gap-8">
-        {projects.map((project, index) => (
+        {visibleProjects.map((project, index) => (
           <div
             key={index}
             className="flex flex-col md:flex-row bg-[#18181b] border border-gray-600 rounded-md overflow-hidden shadow-md hover:shadow-lg transition w-full relative group"
@@ -93,7 +108,7 @@ export default function ProjectCard() {
               height={200}
               src={project.imageUrl}
               alt={project.title}
-              className="rounded-sm border-0 w-full md:w-1/4 h-48 md:h-auto object-cover cursor-pointer"
+              className="md:p-2 md:rounded-xl border-0 w-full md:w-1/4 h-48 md:h-auto object-cover cursor-pointer"
               onClick={() => window.open(project.liveLink, "_blank")}
             />
 
@@ -147,6 +162,25 @@ export default function ProjectCard() {
           </div>
         ))}
       </div>
+
+      {projects.length > 2 && (
+        <div className="text-center mt-6">
+          <button
+            onClick={() => setShowAll((prev) => !prev)}
+            className="text-sm text-[#e4e4e7] transition flex w-full p-2 rounded-lg items-center  bg-[#1f1f21] hover:bg-[#27272a] justify-center gap-1 mx-auto"
+          >
+            {showAll ? (
+              <>
+                Show Less <ChevronUp className="w-4 h-4" />
+              </>
+            ) : (
+              <>
+                Show More <ChevronDown className="w-4 h-4" />
+              </>
+            )}
+          </button>
+        </div>
+      )}
     </div>
   );
 }
