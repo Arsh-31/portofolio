@@ -7,7 +7,7 @@ import Time from "./Time";
 
 export default function Portfolio() {
   return (
-    <div>
+    <div className="leading-relaxed">
       <Time />
       <Card />
       <About />

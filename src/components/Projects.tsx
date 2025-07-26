@@ -9,17 +9,58 @@ const projects = [
   {
     title: "Scribe",
     description:
-      "Scribe is a clean and intuitive note-taking app that lets you write, edit, and save rich-text notes with ease.",
+      "Scribe is a clean and intuitive note-taking app that helps you capture ideas, draft thoughts, and organize them effortlessly — making writing feel simple and enjoyable.",
     imageUrl: "/images/live1.png",
     techStack: ["Next.js 15", "TypeScript", "Tailwind CSS", "Firebase"],
     liveLink: "https://scribe-gold.vercel.app",
     repoLink: "https://github.com/Arsh-31/scribe",
     status: "Running",
   },
+
+  {
+    title: "Myth & Moss",
+    description:
+      "A whimsical, parchment-styled digital newspaper chronicling enchanted flora, forgotten constellations, lunar myths, and eerie folklore. Built with a love for mystery, storytelling, and the strange beauty of old paper.",
+    imageUrl: "/images/myth.png",
+    techStack: ["Next.js 15", "TypeScript", "Tailwind CSS"],
+    liveLink: "https://myth-moss.vercel.app",
+    repoLink: "https://github.com/Arsh-31/myth-moss",
+    status: "Running",
+  },
+  {
+    title: "Pathfinder-Visualizer",
+    description:
+      "An interactive tool that visually demonstrates pathfinding algorithms like A and Dijkstra, showing how they navigate a grid or maze to find the shortest path.",
+    imageUrl: "/images/pathfinder.png",
+    techStack: ["Next.js 15", "TypeScript", "Tailwind CSS"],
+    liveLink: "https://pathfinding-visualizer-swart.vercel.app",
+    repoLink: "https://github.com/Arsh-31/Pathfinding-visualizer",
+    status: "Running",
+  },
+  {
+    title: "Next-Auth",
+    description:
+      "A minimal yet secure authentication system built with Next.js and NextAuth.js, offering multi-provider login, smooth session handling, and effortless integration.",
+    imageUrl: "/images/next.png",
+    techStack: ["Next.js"],
+    liveLink: "",
+    repoLink: "https://github.com/Arsh-31/next-auth",
+    status: "Running",
+  },
+  {
+    title: "TypeWriter",
+    description:
+      "Typewriter is a sleek and engaging typing speed test app that tracks WPM and accuracy in real-time, rewarding your progress with confetti when you finish.",
+    imageUrl: "/images/type.png",
+    techStack: ["Next.js 15", "TypeScript", "Tailwind CSS", "Firebase"],
+    liveLink: "",
+    repoLink: "https://github.com/Arsh-31/TypeWriter",
+    status: "Building",
+  },
   {
     title: "Vesperal",
     description:
-      "A minimal, aesthetic productivity platform featuring a Pomodoro timer, to-dos, and daily motivation.",
+      "A minimal and aesthetic productivity platform that combines a Pomodoro timer, simple to-dos, and daily motivation to help you stay focused and inspired.",
     imageUrl: "/images/live2.png",
     techStack: [
       "Next.js 15",
@@ -32,41 +73,11 @@ const projects = [
     repoLink: "https://github.com/Arsh-31/Vesperal",
     status: "Running",
   },
-  {
-    title: "Pathfinder-Visualizer",
-    description:
-      "A tool that visually demonstrates various pathfinding algorithms (such as A*, Dijkstra) to find the shortest path in a grid or maze.",
-    imageUrl: "/images/pathfinder.png",
-    techStack: ["Next.js 15", "TypeScript", "Tailwind CSS"],
-    liveLink: "https://pathfinding-visualizer-swart.vercel.app",
-    repoLink: "https://github.com/Arsh-31/Pathfinding-visualizer",
-    status: "Running",
-  },
-  {
-    title: "Next-Auth",
-    description:
-      "A minimal and secure authentication system built with Next.js and NextAuth.js, supporting multiple providers and seamless session management.",
-    imageUrl: "/images/next.png",
-    techStack: ["Next.js"],
-    liveLink: "",
-    repoLink: "https://github.com/Arsh-31/next-auth",
-    status: "Running",
-  },
-  {
-    title: "TypeWriter",
-    description:
-      "Typewriter is a sleek typing speed test app with real-time WPM, accuracy tracking, and confetti celebration.",
-    imageUrl: "/images/type.png",
-    techStack: ["Next.js 15", "TypeScript", "Tailwind CSS", "Firebase"],
-    liveLink: "",
-    repoLink: "https://github.com/Arsh-31/TypeWriter",
-    status: "Building",
-  },
 ];
 
 export default function ProjectCard() {
   const [showAll, setShowAll] = useState(false);
-  const visibleProjects = showAll ? projects : projects.slice(0, 2);
+  const visibleProjects = showAll ? projects : projects.slice(0, 3);
 
   function StatusTag({ status }: { status: string }) {
     const base = "text-xs font-medium px-2 py-0.5 rounded-sm";
@@ -93,8 +104,10 @@ export default function ProjectCard() {
   }
 
   return (
-    <div className="mx-auto mt-12 max-w-3xl w-[90%]">
-      <h1 className="text-2xl font-bold mb-8">Projects</h1>
+    <div className="mx-auto mt-5 max-w-3xl w-[90%]">
+      <h1 className="text-xl font-bold mb-4 underline decoration-wavy decoration-[#f2efea] underline-offset-6">
+        Projects
+      </h1>
 
       <div className="grid gap-8">
         {visibleProjects.map((project, index) => (
@@ -144,11 +157,11 @@ export default function ProjectCard() {
                   <h2 className="text-xl font-bold">{project.title}</h2>
                   <StatusTag status={project.status} />
                 </div>
-                <p className="text-sm mb-4">{project.description}</p>
+                <p className="text-md mb-4">{project.description}</p>
               </div>
 
               {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 pt-4">
+              {/* <div className="flex flex-wrap gap-2 pt-4">
                 {project.techStack.map((tech, idx) => (
                   <span
                     key={idx}
@@ -157,7 +170,7 @@ export default function ProjectCard() {
                     {tech}
                   </span>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
         ))}

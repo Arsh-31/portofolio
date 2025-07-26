@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export default function Card() {
   return (
-    <div className="relative border border-gray-700 rounded-md p-8 mx-auto mt-10 max-w-3xl w-[90%] shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <div className="relative rounded-md pt-5 mx-auto mt-10 max-w-3xl w-[90%]">
       {/* GitHub Icon for large screens */}
-      <div>
+      {/* <div>
         <div className="hidden md:flex absolute top-4 right-5 gap-4">
           <a
             href="https://github.com/Arsh-31"
@@ -26,7 +26,7 @@ export default function Card() {
             <Mail size={23} />
           </a>
         </div>
-      </div>
+      </div> */}
 
       <div className="flex flex-col md:flex-row items-center md:items-start">
         {/* Profile Image */}
@@ -34,19 +34,38 @@ export default function Card() {
           <Image
             src="/images/img.jpg"
             alt="Arsh's GitHub Profile"
-            width={96}
-            height={96}
-            className="rounded-sm border border-[#c41e3a] w-26 h-26 object-cover mx-auto md:mx-0 shadow-md hover:shadow-lg transition-shadow duration-300"
+            width={100}
+            height={100}
+            className="rounded-sm border border-[#c41e3a] w-32 h-32 object-cover mx-auto md:mx-0 shadow-md hover:shadow-lg transition-shadow duration-300 select-none"
           />
         </div>
 
         {/* Name and details */}
-        <div className="flex flex-col w-full md:ml-8 mt-6 md:mt-0 md:h-full md:justify-center">
+        <div className="flex flex-col w-full md:ml-5 mt-6 md:mt-0 md:h-full md:justify-center">
           <div className="text-center align-middle md:text-left">
-            <h1 className="font-bold text-3xl md:text-5xl text-[#c41e3a]">
+            <h1 className="font-bold text-2xl md:text-5xl text-[#c41e3a]">
               Arsh
             </h1>
-            <h6 className="text-[#e4e4e7] text-xl mt-2">Software Engineer</h6>
+            <h6 className="text-[#e4e4e7] text-lg">Software Engineer</h6>
+            <div className="hidden md:flex gap-2 mt-1">
+              <a
+                href="https://github.com/Arsh-31"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit GitHub Profile"
+                className="text-[#e4e4e7] p-2 bg-black hover:bg-[#27272a] rounded transition-colors duration-300 border border-[#27272a]"
+              >
+                <FaGithub size={20} />
+              </a>
+
+              <a
+                href="mailto:kaurarshpreet746@gmail.com"
+                aria-label="Send Email"
+                className="text-[#e4e4e7] p-2 bg-black hover:bg-[#27272a] rounded transition-colors duration-300 border border-[#27272a]"
+              >
+                <Mail size={20} />
+              </a>
+            </div>
           </div>
 
           {/* GitHub Icon for small screens */}
@@ -72,12 +91,12 @@ export default function Card() {
       </div>
 
       {/* Bio */}
-      <div className="mt-8">
+      {/* <div className="mt-8">
         <p className="text-gray-300">
           I enjoy building projects and learning about new technologies. Always
           looking to improve and take on new challenges.
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }

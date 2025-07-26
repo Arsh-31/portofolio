@@ -27,9 +27,9 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer className="mx-auto mt-12 max-w-3xl w-[90%]">
-      <h1 className="text-2xl font-bold mb-4">Reach out to me</h1>
-      <p className="mb-6">
+    <footer className="mx-auto mt-6 max-w-3xl w-[90%]">
+      <h1 className="text-xl font-bold mb-1">Reach out to me</h1>
+      <p className="mb-4">
         I&apos;m always open to connecting with fellow developers, discussing
         new opportunities, or collaborating on exciting projects. Feel free to
         drop me a message or reach out through any of the platforms below!
