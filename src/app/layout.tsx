@@ -17,14 +17,14 @@ export const metadata: Metadata = {
   description: "My Portofolio",
   icons: {
     icon: [
-      { url: "./images/img.png" },
-      { url: "./images/img.png", sizes: "32x32", type: "image/png" },
-      { url: "./images/img.png", sizes: "16x16", type: "image/png" },
+      { url: "/images/img.jpg" },
+      { url: "/images/img.jpg", sizes: "32x32", type: "image/png" },
+      { url: "/images/img.jpg", sizes: "16x16", type: "image/png" },
     ],
-    apple: "/images/img.png",
+    apple: "/images/img.jpg",
     shortcut: [
       {
-        url: "./images/img.png",
+        url: "/images/img.jpg",
         type: "image/png",
       },
     ],
