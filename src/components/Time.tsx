@@ -1,6 +1,6 @@
 "use client";
 
-import { Clock } from "lucide-react";
+// import { Clock } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function Time() {
@@ -22,7 +22,7 @@ export default function Time() {
 
   return (
     <div className="ml-6 mt-[-20px] fixed text-[#acacac] flex gap-2 items-center hover:text-[#f2efea] transition-colors duration-300 ease-in-out">
-      <Clock size={20} />
+      {/* <Clock size={20} /> */}
       {time}
     </div>
   );

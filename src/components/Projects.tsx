@@ -129,16 +129,18 @@ export default function ProjectCard() {
             <div className="flex flex-col justify-between p-5 w-full text-[#e4e4e7] relative">
               {/* Top Right Links */}
               <div className="absolute top-4 right-4 flex space-x-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <a
-                  href={project.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-sm hover:underline"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <FaExternalLinkAlt className="text-sm" />
-                  Live
-                </a>
+                {project.liveLink !== "" && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-sm hover:underline"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <FaExternalLinkAlt className="text-sm" />
+                    Live
+                  </a>
+                )}
                 <a
                   href={project.repoLink}
                   target="_blank"
