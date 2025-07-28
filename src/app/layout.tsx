@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         { url: "/images/img.jpg", sizes: "32x32", type: "image/png" },
         { url: "/images/img.jpg", sizes: "16x16", type: "image/png" },
       ],
-    apple: "/images/img.jpg",
+    // apple: "/images/img.jpg",
     shortcut: [
       {
         url: "/images/img.jpg",
