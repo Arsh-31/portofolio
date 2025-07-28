@@ -16,11 +16,13 @@ export const metadata: Metadata = {
   title: "Arsh",
   description: "My Portofolio",
   icons: {
-    icon: [
-      { url: "/images/img.jpg" },
-      { url: "/images/img.jpg", sizes: "32x32", type: "image/png" },
-      { url: "/images/img.jpg", sizes: "16x16", type: "image/png" },
-    ],
+    icon:
+      // "/images/img.jpg",
+      [
+        { url: "/images/img.jpg" },
+        { url: "/images/img.jpg", sizes: "32x32", type: "image/png" },
+        { url: "/images/img.jpg", sizes: "16x16", type: "image/png" },
+      ],
     apple: "/images/img.jpg",
     shortcut: [
       {
@@ -34,6 +36,14 @@ export const metadata: Metadata = {
     description: "My Portofolio",
     url: "https://portofolio-bay-eta.vercel.app",
     siteName: "Portofolio",
+    images: [
+      {
+        url: "/images/img.jpg",
+        width: 800,
+        height: 600,
+        alt: "Arsh's Portofolio",
+      },
+    ],
     locale: "en-IN",
     type: "website",
   },
