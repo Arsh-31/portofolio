@@ -73,6 +73,22 @@ const projects = [
     repoLink: "https://github.com/Arsh-31/Vesperal",
     status: "Running",
   },
+  {
+    title: "PitchFlow",
+    description:
+      "Pitchflow is an AI-powered marketing copy generator that blends smart language models with a sleek interface to create persuasive, high-converting content tailored to your brand and audience.",
+    imageUrl: "/images/pitchflow.png",
+    techStack: [
+      "Next.js 15",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Cohere API",
+    ],
+    liveLink: "",
+    repoLink: "https://github.com/Arsh-31/pitch-flow",
+    status: "Running",
+  },
 ];
 
 export default function ProjectCard() {
@@ -122,7 +138,11 @@ export default function ProjectCard() {
               src={project.imageUrl}
               alt={project.title}
               className="md:p-2 md:rounded-xl border-0 w-full md:w-1/4 h-48 md:h-auto object-cover cursor-pointer"
-              onClick={() => window.open(project.liveLink, "_blank")}
+              onClick={
+                project.liveLink !== ""
+                  ? () => window.open(project.liveLink, "_blank")
+                  : undefined
+              }
             />
 
             {/* Right Content */}
