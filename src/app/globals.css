@@ -72,3 +72,8 @@ body {
   background-color: #b64f60; /* Change to any color you prefer */
   color: white; /* Optional: change text color */
 }
+
+.transition-max-height {
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
