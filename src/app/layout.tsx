@@ -13,38 +13,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://arsh31.vercel.app"),
   title: "Arsh",
   description: "My Portofolio",
   icons: {
-    icon:
-      // "/images/img.jpg",
-      [
-        { url: "/images/img.jpg" },
-        { url: "/images/img.jpg", sizes: "32x32", type: "image/png" },
-        { url: "/images/img.jpg", sizes: "16x16", type: "image/png" },
-      ],
-    shortcut: [
-      {
-        url: "/images/img.jpg",
-        type: "image/png",
-      },
+    icon: [
+      { url: "/images/img.png" },
+      { url: "/images/img.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/img.png", sizes: "16x16", type: "image/png" },
     ],
+    apple: "/images/img.png",
   },
   openGraph: {
     title: "Arsh",
-    description: "My Portofolio",
-    url: "https://portofolio-bay-eta.vercel.app",
-    siteName: "Portofolio",
-    images: [
-      {
-        url: "/images/img.jpg",
-        width: 800,
-        height: 600,
-        alt: "Arsh's Portofolio",
-      },
-    ],
-    locale: "en-IN",
-    type: "website",
+    description: "My Portfolio",
+    images: ["/images/img.png"],
+    url: "https://arsh31.vercel.app",
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/img.pmg"],
   },
 };
 
