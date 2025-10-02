@@ -31,6 +31,16 @@ export const projects = [
     status: "Running",
   },
   {
+    title: "RuneBind",
+    description:
+      "A modern web app that lets you merge, split, compress, and convert PDF files to JPG images instantly, with a clean interface and privacy-first processing.",
+    imageUrl: "/images/runebind.png",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "pdf-lib"],
+    liveLink: "https://runebind.vercel.app",
+    repoLink: "https://github.com/Arsh-31/runebind",
+    status: "Running",
+  },
+  {
     title: "Next-Auth",
     description:
       "A minimal yet secure authentication system built with Next.js and NextAuth.js, offering multi-provider login, smooth session handling, and effortless integration.",
@@ -64,6 +74,23 @@ export const projects = [
     ],
     liveLink: "",
     repoLink: "https://github.com/Arsh-31/pitch-flow",
+    status: "Running",
+  },
+  {
+    title: "Lincel",
+    description:
+      "Lincel is an URL shortener that combines fast and reliable link processing with a sleek, intuitive interface, allowing users to effortlessly transform long, unwieldy URLs into compact, shareable links while keeping the experience playful, magical, and highly memorable.",
+    imageUrl: "/images/lincel.png",
+    techStack: [
+      "Next.js 15",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Axios",
+      "Express",
+    ],
+    liveLink: "",
+    repoLink: "https://github.com/Arsh-31/lincel-url-shortener",
     status: "Running",
   },
   {

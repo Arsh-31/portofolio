@@ -46,7 +46,9 @@ export default function Card() {
             <h1 className="font-bold text-2xl md:text-5xl text-[#c41e3a]">
               Arsh
             </h1>
-            <h6 className="text-[#e4e4e7] text-lg">Software Engineer</h6>
+            <h6 className="hidden sm:block text-[#e4e4e7] text-lg">
+              Software Engineer
+            </h6>
             <div className="hidden md:flex gap-2 mt-1">
               <a
                 href="https://github.com/Arsh-31"
