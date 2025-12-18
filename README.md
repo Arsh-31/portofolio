@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio built with Next.js and TypeScript.
 
-## ✨ Features
+## Features
 
 - **Responsive Design** - Optimized for all devices
 - **Smooth Animations** - Built with Framer Motion
@@ -11,7 +11,7 @@ A modern, responsive portfolio built with Next.js and TypeScript.
 - **Skills Section** - Technical expertise display
 - **About Me** - Personal introduction and background
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: Next.js 15
 - **Language**: TypeScript
@@ -19,7 +19,7 @@ A modern, responsive portfolio built with Next.js and TypeScript.
 - **Icons**: Lucide React, React Icons
 - **Deployment**: Vercel
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -37,6 +37,6 @@ src/
     └── Wrapper.tsx     # Layout wrapper
 ```
 
-## 🌟 Inspiration
+## Inspiration
 
 This portfolio design was inspired by the awesome work of [@rinkitadhana](https://github.com/rinkitadhana) - thank you for the creative inspiration!
